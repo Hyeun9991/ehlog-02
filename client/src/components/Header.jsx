@@ -8,10 +8,10 @@ const navItemsInfo = [
     name: 'Home',
   },
   {
-    name: 'Articles',
+    name: 'About',
   },
   {
-    name: 'Pages',
+    name: 'Articles',
   },
 ];
 
@@ -84,21 +84,16 @@ const Header = () => {
       <header className="">
         {/* Main Header */}
         <div
-          className={`container mx-auto py-9 flex items-center justify-center gap-4 ${
-            scrollActive ? 'py-4 md:py-6' : ''
+          className={`container mx-auto flex items-center justify-center gap-4 ${
+            scrollActive ? 'h-12 md:h-20' : 'h-32 md:h-44'
           }`}
         >
-          <img
-            src={images.Logo}
-            alt="logo"
-            className={`${scrollActive ? 'hidden' : ''}`}
-          />
           <h1
-            className={`text-4xl font-crimson font-semibold text-textColor-light dark:text-textColor-dark ${
-              scrollActive ? 'text-xl md:text-2xl' : ''
+            className={`font-crimson font-bold text-textColor-light dark:text-textColor-dark ${
+              scrollActive ? 'text-lg md:text-2xl' : 'text-4xl md:text-6xl'
             }`}
           >
-            qkrdmsgp_eh
+            qkrdmsgp_eh.
           </h1>
           <div
             className={`absolute top-1/2 right-6 transform -translate-y-1/2 rotate-y-[-50%] text-xl md:text-2xl cursor-pointer ${
@@ -111,7 +106,7 @@ const Header = () => {
 
           {/* Hidden Menu */}
           {navIsVisible && (
-            <ul className="bg-zinc-200 fixed top-[62px] md:top-[82px] w-full text-sm font-crimson font-semibold">
+            <ul className="bg-zinc-200 fixed top-[50px] md:top-[82px] w-full text-sm font-crimson font-semibold">
               {navItemsInfo.map((item, index) => (
                 <HiddenNavItem key={index} name={item.name} />
               ))}
@@ -136,11 +131,12 @@ const Header = () => {
               ))}
 
               {/* Links */}
-              <div className="border-secondColor-light px-9 h-full hidden md:flex md:items-center  gap-3 text-lg dark:border-secondColor-dark">
+              <div className="border-secondColor-light px-9 h-full hidden md:flex md:items-center gap-3 text-lg text-textColor-light  dark:border-secondColor-dark">
                 <a
                   href="https://github.com/Hyeun9991"
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:text-primaryColor-light dark:hover:text-primaryColor-dark"
                 >
                   <BsGithub />
                 </a>
@@ -148,13 +144,14 @@ const Header = () => {
                   href="mailto:hyeun9991@gmail.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:text-primaryColor-light dark:hover:text-primaryColor-dark"
                 >
                   <BsFillSendCheckFill />
                 </a>
               </div>
 
               {/* Sign in Button */}
-              <button className="border-secondColor-light border-l-2 border-r-2 bg-black text-white hover:bg-primaryColor-light focus:bg-blue-500 focus:text-black px-9 h-full hidden md:flex md:items-center dark:border-secondColor-dark">
+              <button className="border-secondColor-light border-l-2 border-r-2 bg-black text-white hover:bg-primaryColor-light focus:bg-blue-500 focus:text-black px-9 h-full hidden md:flex md:items-center dark:border-secondColor-dark transition-all duration-200">
                 Sign in
               </button>
             </ul>
