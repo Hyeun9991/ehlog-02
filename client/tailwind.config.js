@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,jsx}'],
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -8,19 +8,21 @@ module.exports = {
       },
       colors: {
         primaryColor: {
-          light: '#60a5fa',
-          dark: '#93c5fd',
+          defaultColor: '#0393F1',
+          fromColor: '#59d2ff',
+          toColor: '#0393F1',
         },
         secondColor: {
-          light: '#18181b',
+          defaultColor: '#27272a',
+          light: '#52525b',
           dark: '#71717a',
         },
         bgColor: {
           light: '#f9fafb',
-          dark: '#1f2937',
+          dark: '#18181b',
         },
         textColor: {
-          light: '#18181b',
+          light: '#262626',
           dark: '#d4d4d8',
         },
       },
