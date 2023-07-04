@@ -20,4 +20,9 @@
   .title-2xl {
     @apply text-2xl font-semibold font-crimson text-textColor-light md:text-3xl dark:text-textColor-dark;
   }
+
+  /* Position */
+  .position-center {
+    @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+  }
 }

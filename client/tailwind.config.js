@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         crimson: ['Crimson Text', 'sans-serif'],
+        nanum: ['Nanum Myeongjo', 'serif'],
       },
       colors: {
         primaryColor: {
