@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import LeftHeader from './Section/LeftHeader';
-import { navItems, linkItems } from './MenuItems';
 
 import RightHeader from './Section/RightHeader';
 import SideMenu from './Section/SideMenu';
@@ -8,7 +7,6 @@ import SideMenu from './Section/SideMenu';
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [scrollActive, setScrollActive] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
 
   const scrollHandler = () => {
     if (scrollY > 240) {
