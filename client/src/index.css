@@ -8,12 +8,12 @@
     @apply bg-gradient-to-tr from-primaryColor-fromColor to-primaryColor-toColor;
   }
   .text-primary-gradient {
-    @apply text-transparent transition-all duration-200 bg-clip-text bg-gradient-to-r from-primaryColor-fromColor to-primaryColor-toColor;
+    @apply text-transparent transition-all duration-200 bg-clip-text bg-gradient-to-tr from-primaryColor-fromColor to-primaryColor-toColor;
   }
 
   /* Primary Button */
   .primary-button {
-    @apply text-white transition-all duration-200 bg-secondColor-defaultColor border-secondColor-light hover:bg-primary-gradient dark:bg-bgColor-dark dark:text-textColor-dark dark:border-secondColor-dark;
+    @apply text-white transition-all duration-200 bg-secondColor-defaultColor border-secondColor-light hover:bg-primary-gradient hover:text-blue-50 dark:bg-bgColor-dark dark:text-textColor-dark dark:border-secondColor-dark;
   }
 
   /* Title */

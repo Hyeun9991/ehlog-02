@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import LeftHeader from './Section/LeftHeader';
-
 import RightHeader from './Section/RightHeader';
 import SideMenu from './Section/SideMenu';
 

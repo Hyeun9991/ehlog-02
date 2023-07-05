@@ -1,31 +1,7 @@
-import { useEffect, useState } from 'react';
-import { BsGithub, BsFillSendCheckFill } from 'react-icons/bs';
-import { IoCloseOutline, IoMenuOutline } from 'react-icons/io5';
-
-const navItemsInfo = [
-  {
-    name: 'Home',
-  },
-  {
-    name: 'About',
-  },
-  {
-    name: 'Articles',
-  },
-];
-
-const linkItems = [
-  {
-    id: 1,
-    icon: <BsGithub />,
-    href: 'https://github.com/Hyeun9991',
-  },
-  {
-    id: 2,
-    icon: <BsFillSendCheckFill />,
-    href: 'mailto:hyeun9991@gmail.com',
-  },
-];
+import {
+  navItems,
+  linkItems,
+} from '../../../components/Layout/Header/MenuItems';
 
 const NavItem = ({ name, isLastItem }) => {
   return (
@@ -65,11 +41,11 @@ const Banner = () => {
         <div className="container h-full mx-auto">
           {/* Menu Items */}
           <ul className="flex items-center justify-center h-full text-sm font-semibold font-crimson">
-            {navItemsInfo.map((item, index) => (
+            {navItems.map((item, index) => (
               <NavItem
                 key={index}
                 name={item.name}
-                isLastItem={index === navItemsInfo.length - 1}
+                isLastItem={index === navItems.length - 1}
               />
             ))}
 
@@ -78,7 +54,7 @@ const Banner = () => {
               {linkItems.map((item) => (
                 <a
                   key={item.id}
-                  href={item.href}
+                  href={item.to}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -88,7 +64,7 @@ const Banner = () => {
             </div>
 
             {/* Sign in Button */}
-            <button className="hidden h-full border-l-2 border-r-2 primary-button px-9 md:flex md:items-center">
+            <button className="hidden h-full border-l-2 border-r-2 primary-button px-9 md:flex md:items-center hover:font-sans">
               Sign in
             </button>
           </ul>
