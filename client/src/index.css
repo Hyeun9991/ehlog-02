@@ -21,6 +21,17 @@
     @apply text-2xl font-semibold font-crimson text-textColor-light md:text-3xl dark:text-textColor-dark;
   }
 
+  /* Texts */
+  .logo-text {
+    @apply font-semibold font-crimson text-textColor-light dark:text-textColor-light;
+  }
+  .hover-text {
+    @apply font-semibold transition-all duration-200 font-crimson text-textColor-light dark:text-textColor-light hover:text-primary-gradient hover:font-sans;
+  }
+  .hover-icon {
+    @apply transition-all duration-200 text-textColor-light dark:text-textColor-light hover:text-primaryColor-defaultColor;
+  }
+
   /* Position */
   .position-center {
     @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;

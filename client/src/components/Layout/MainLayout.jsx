@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+import Header from './Header/Header';
 import Footer from './Footer';
 
 const MainLayout = ({ children }) => {
@@ -30,7 +30,7 @@ const MainLayout = ({ children }) => {
   return (
     <div>
       <Header />
-      <main className={`${scrollActive ? 'mt-[280px]' : ''}`}>{children}</main>
+      {children}
       <Footer />
     </div>
   );
