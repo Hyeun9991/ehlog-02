@@ -3,15 +3,15 @@ import ArticleCard from '../../../components/ArticleCard';
 
 const Articles = () => {
   return (
-    <section className="border-b-2 pb-14 border-secondColor-light bg-bgColor-light dark:bg-bgColor-dark dark:border-secondColor-dark">
-      <div className="w-full md:w-[700px] p-4 mx-auto">
-        <h1 className="mb-4 mt-14 text-textColor-light title-2xl dark:text-textColor-dark">
+    <section className="border-b-2 border-secondColor-light bg-bgColor-light dark:bg-bgColor-dark dark:border-secondColor-dark">
+      <div className="main-container">
+        <h1 className="title-2xl">
           Never Miss a New Post
-          <span className="text-4xl text-primary-gradient"> .</span>
+          <span className="text-4xl primary-dot-2xl"> .</span>
         </h1>
         <ArticleCard />
         <div className="flex justify-center gap-4">
-          <button className="py-3 text-sm border-2 border-secondColor-light px-9 hover-text font-crimson hover:font-sans">
+          <button className="secondary-button-sm sm:secondary-button">
             More Articles
           </button>
         </div>
