@@ -2,18 +2,19 @@ import {
   navItems,
   linkItems,
 } from '../../../components/Layout/Header/MenuItems';
+import { Link } from 'react-router-dom';
 
-const NavItem = ({ name, isLastItem }) => {
+const NavItem = ({ name, isLastItem, to }) => {
   return (
     <li className="h-full">
-      <a
-        href="/"
+      <Link
+        to={to}
         className={`flex items-center h-full px-10 border-l-2 hover-text border-secondColor-light md:px-12 dark:border-secondColor-dark ${
           isLastItem ? 'border-r-2 border-secondColor-light' : ''
         }`}
       >
         {name}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -22,22 +23,19 @@ const Banner = () => {
   return (
     <section className="z-50 bg-bgColor-light dark:bg-bgColor-dark">
       {/* Main Header */}
-      <header className="h-[195px]">
+      <header className="main-container">
         <div className="container flex items-center justify-center h-full gap-4 mx-auto">
           {/* Logo */}
-          <a href="/">
-            <h1 className="text-5xl font-bold lg:text-6xl font-crimson text-textColor-light dark:text-textColor-dark">
+          <Link to="/">
+            <h1 className="text-4xl md:text-5xl logo-text">
               qkrdmsgp_eh{' '}
-              <span className="text-6xl lg:text-7xl text-primary-gradient">
-                {' '}
-                .
-              </span>
+              <span className="text-6xl md:text-7xl primary-dot-2xl"> .</span>
             </h1>
-          </a>
+          </Link>
         </div>
       </header>
       {/* Second Header */}
-      <div className="h-[45px] border-t-2 border-b-2 border-secondColor-light dark:border-secondColor-dark transition-all duration-200">
+      <div className="h-[40px] md:h-[45px] border-t-2 border-b-2 border-secondColor-light dark:border-secondColor-dark transition-all duration-200">
         <div className="container h-full mx-auto">
           {/* Menu Items */}
           <ul className="flex items-center justify-center h-full text-sm font-semibold font-crimson">
@@ -45,6 +43,7 @@ const Banner = () => {
               <NavItem
                 key={index}
                 name={item.name}
+                to={item.to}
                 isLastItem={index === navItems.length - 1}
               />
             ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { navItems } from '../MenuItems';
+import { Link } from 'react-router-dom';
 
 const LeftHeader = () => {
   return (
@@ -7,12 +8,12 @@ const LeftHeader = () => {
       <ul className="flex h-full gap-8">
         {navItems.map((item) => (
           <li key={item.id} className="flex items-center h-full">
-            <a
-              href={item.to}
+            <Link
+              to={item.to}
               className="flex items-center h-full text-sm hover-text"
             >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

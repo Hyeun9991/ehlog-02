@@ -1,17 +1,19 @@
 import React from 'react';
 import MainLayout from '../../components/Layout/MainLayout';
-import Hero from './container/Hero';
+import SearchBanner from './container/SearchBanner';
 import Articles from './container/Articles';
 import Banner from './container/Banner';
-import CTA from './container/CTA';
+import AboutBanner from './container/AboutBanner';
+import ArticleSliderBanner from './container/ArticleSliderBanner';
 
 const HomePage = () => {
   return (
     <MainLayout>
       <Banner />
-      <Hero />
-      <Articles />
-      <CTA />
+      <SearchBanner />
+      <ArticleSliderBanner />
+      {/* <Articles /> */}
+      <AboutBanner />
     </MainLayout>
   );
 };

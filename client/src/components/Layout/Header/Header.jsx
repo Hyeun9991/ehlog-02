@@ -34,7 +34,7 @@ const Header = () => {
         scrollActive ? 'top-0' : 'top-[-48px] md:top-[-64px]'
       }`}
     >
-      <div className="container flex items-center justify-between w-full h-full mx-auto">
+      <div className="container flex items-center justify-between w-full h-full mx-auto md:px-6">
         {/* Left Section - Menu Items */}
         <LeftHeader />
 
@@ -52,7 +52,7 @@ const Header = () => {
         <RightHeader />
 
         {/* Side Menu */}
-        <SideMenu />
+        {scrollActive && <SideMenu />}
       </div>
     </header>
   );

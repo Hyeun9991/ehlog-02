@@ -11,9 +11,27 @@
     @apply text-transparent transition-all duration-200 bg-clip-text bg-gradient-to-tr from-primaryColor-fromColor to-primaryColor-toColor;
   }
 
-  /* Primary Button */
+  /* Buttons */
   .primary-button {
     @apply text-white transition-all duration-200 bg-secondColor-defaultColor border-secondColor-light hover:bg-primary-gradient hover:text-blue-50 dark:bg-bgColor-dark dark:text-textColor-dark dark:border-secondColor-dark;
+  }
+  .secondary-button {
+    @apply py-3 text-sm font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient px-9 font-crimson text-textColor-light dark:text-textColor-dark;
+  }
+  .secondary-button-sm {
+    @apply py-2.5 text-xs font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient px-8 font-crimson text-textColor-light dark:text-textColor-dark;
+  }
+  .active-button {
+    @apply bg-zinc-800 hover:bg-primary-gradient flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
+  }
+  .primary-active-button {
+    @apply bg-primary-gradient flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
+  }
+  .primary-active-button-long {
+    @apply flex items-center justify-center px-4 py-1.5 text-white rounded-full bg-primary-gradient hover:text-blue-50;
+  }
+  .active-button-res {
+    @apply bg-zinc-800 hover:bg-primary-gradient text-sm sm:text-lg flex items-center justify-center rounded-full w-[24px] h-[24px] sm:w-[32px] sm:h-[32px] text-white hover:text-blue-50;
   }
 
   /* Title */
@@ -23,7 +41,7 @@
 
   /* Texts */
   .logo-text {
-    @apply font-semibold font-crimson text-textColor-light dark:text-textColor-light;
+    @apply font-semibold font-crimson text-textColor-light dark:text-textColor-light hover:text-primary-gradient hover:font-sans;
   }
   .hover-text {
     @apply font-semibold transition-all duration-200 font-crimson text-textColor-light dark:text-textColor-light hover:text-primary-gradient hover:font-sans;
@@ -31,9 +49,38 @@
   .hover-icon {
     @apply transition-all duration-200 text-textColor-light dark:text-textColor-light hover:text-primaryColor-defaultColor;
   }
+  .primary-dot-2xl {
+    @apply text-2xl leading-3 text-primary-gradient;
+  }
 
   /* Position */
   .position-center {
     @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
   }
+  .position-center-bottom {
+    @apply fixed transform -translate-x-1/2 bottom-8 left-1/2;
+  }
+
+  /* Container */
+  .big-container {
+    @apply container px-4 mx-auto py-10 sm:py-16 sm:px-0 md:w-[900px];
+  }
+  .main-container {
+    @apply container px-4 mx-auto py-10 sm:py-16 sm:px-0 md:w-[700px];
+  }
+  .secondary-container {
+    @apply container mx-auto sm:py-8 md:w-[700px];
+  }
+
+  /* Borders */
+  .border-full-2 {
+    @apply border-2 border-secondColor-light dark:border-secondColor-dark;
+  }
+  .border-bottom-2 {
+    @apply border-b-2 border-secondColor-light dark:border-secondColor-dark;
+  }
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }

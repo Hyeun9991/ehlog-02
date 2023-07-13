@@ -11,7 +11,7 @@ module.exports = {
         primaryColor: {
           defaultColor: '#0393F1',
           fromColor: '#59d2ff',
-          toColor: '#0393F1',
+          toColor: '#028ce7',
         },
         secondColor: {
           defaultColor: '#27272a',

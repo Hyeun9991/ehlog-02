@@ -4,7 +4,7 @@ export const navItems = [
   {
     id: 1,
     name: 'Home',
-    to: '/home',
+    to: '/',
   },
   {
     id: 2,
