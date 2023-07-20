@@ -131,7 +131,13 @@ const Comment = ({
                   }`}
                 />
               </span>{' '}
-              <span className="text-sm hover-text text-color">
+              <span
+                className={`text-sm hover-text ${
+                  clicked
+                    ? 'font-sans text-transparent transition-all duration-200 bg-clip-text bg-gradient-to-tr from-primaryColor-fromColor to-primaryColor-toColor'
+                    : 'text-color'
+                }`}
+              >
                 Replies {replies.length}
               </span>
             </button>

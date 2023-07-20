@@ -5,7 +5,10 @@ const BreadCrumbs = ({ data }) => {
   return (
     <div className="flex items-center pt-4 overflow-x-auto whitespace-nowrap sm:pt-0">
       {data.map((item, index) => (
-        <div className="text-xs hover-text" key={item.id}>
+        <div
+          className="text-xs hover-text opacity-40 hover:opacity-100"
+          key={item.id}
+        >
           <Link to={item.to}>{item.name}</Link>
           {index !== data.length - 1 && <span>/</span>}
         </div>

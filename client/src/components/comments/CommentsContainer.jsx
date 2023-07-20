@@ -71,8 +71,8 @@ const CommentsContainer = ({ className, loggedInUserId }) => {
   };
 
   return (
-    <div className="bg-bgColor-light dark:bg-bgColor-dark">
-      <div className={`${className} px-4 pb-24 secondary-container sm:px-0`}>
+    <div className="bg-bgColor-light dark:bg-bgColor-dark border-bottom-2">
+      <div className={`${className} px-4 main-container sm:px-0`}>
         <p className="mb-6 text-sm">댓글 1490개</p>
         <CommentForm
           btnLabel="Respond"
