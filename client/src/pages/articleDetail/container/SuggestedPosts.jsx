@@ -91,7 +91,10 @@ const SuggestedPosts = () => {
         </h2>
         <ul className="grid grid-cols-1 pt-8 md:p-4 gap-x-8 gap-y-8 sm:gap-y-14 md:grid-cols-2 xl:grid-cols-4">
           {postsData.map((post) => (
-            <li key={post.id} className="flex flex-col border-full-2">
+            <li
+              key={post.id}
+              className="flex flex-col bg-bgColor-light border-full-2 dark:bg-bgColor-dark"
+            >
               {/* Post Preview Image */}
               {post?.imgPath ? (
                 <div className="w-full">
