@@ -90,32 +90,32 @@ const PostInfo = () => {
         <div>
           <ul className="flex flex-wrap gap-x-1 gap-y-4 sm:gap-y-6">
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 Education
               </Link>
             </li>
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 EducationEducation
               </Link>
             </li>
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 Educa
               </Link>
             </li>
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 Educationtiontion
               </Link>
             </li>
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 Edu
               </Link>
             </li>
             <li>
-              <Link className="/blog?category=selectedCategory font-semibold text-xs px-4 py-2 sm:text-sm  sm:px-6 sm:py-2.5 rounded-full text-textColor-light font-crimson dark:text-textColor-dark  border-2 border-secondColor-light hover:bg-transparent hover:font-sans hover:text-primary-gradient">
+              <Link className="/blog?category=selectedCategory px-6 rounded-full secondary-button-sm">
                 Educa
               </Link>
             </li>

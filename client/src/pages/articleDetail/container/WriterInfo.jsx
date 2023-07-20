@@ -27,7 +27,7 @@ const WriterInfo = () => {
           <ul className="flex gap-2 sm:gap-4">
             {linkItems.map((item) => (
               <li key={item.id}>
-                <a href={item.to} className="active-button-res">
+                <a href={item.to} className="active-button-sm sm:active-button">
                   <span>{item.icon}</span>
                 </a>
               </li>

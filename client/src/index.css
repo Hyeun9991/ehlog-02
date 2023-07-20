@@ -11,27 +11,44 @@
     @apply text-transparent transition-all duration-200 bg-clip-text bg-gradient-to-tr from-primaryColor-fromColor to-primaryColor-toColor;
   }
 
+  /* Text Color */
+  .text-color {
+    @apply text-textColor-light dark:text-textColor-dark;
+  }
+
   /* Buttons */
+
+  /* Primary Button */
   .primary-button {
     @apply text-white transition-all duration-200 bg-secondColor-defaultColor border-secondColor-light hover:bg-primary-gradient hover:text-blue-50 dark:bg-bgColor-dark dark:text-textColor-dark dark:border-secondColor-dark;
   }
+  .primary-button-icon {
+    @apply bg-primary-gradient flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
+  }
+  .primary-button-text {
+    @apply flex items-center justify-center px-4 py-1.5 text-white rounded-full bg-primary-gradient hover:text-blue-50 hover:font-sans text-sm font-semibold font-crimson;
+  }
+
+  /* Active Button */
+  .active-button {
+    @apply bg-zinc-800 hover:bg-primary-gradient text-lg flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
+  }
+  .active-button-sm {
+    @apply bg-zinc-800 hover:bg-primary-gradient text-sm flex items-center justify-center rounded-full w-[24px] h-[24px] text-white hover:text-blue-50;
+  }
+
+  /* Secondary Button */
   .secondary-button {
     @apply py-3 text-sm font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient px-9 font-crimson text-textColor-light dark:text-textColor-dark;
   }
+  .secondary-button-icon {
+    @apply flex items-center justify-center p-1 rounded-full border-full-2 hover:text-primaryColor-defaultColor;
+  }
+  .secondary-button-xs {
+    @apply px-4 py-1.5 text-xs font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient font-crimson text-textColor-light dark:text-textColor-dark;
+  }
   .secondary-button-sm {
-    @apply py-2.5 text-xs font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient px-8 font-crimson text-textColor-light dark:text-textColor-dark;
-  }
-  .active-button {
-    @apply bg-zinc-800 hover:bg-primary-gradient flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
-  }
-  .primary-active-button {
-    @apply bg-primary-gradient flex items-center justify-center rounded-full w-[32px] h-[32px] text-white hover:text-blue-50;
-  }
-  .primary-active-button-long {
-    @apply flex items-center justify-center px-4 py-1.5 text-white rounded-full bg-primary-gradient hover:text-blue-50;
-  }
-  .active-button-res {
-    @apply bg-zinc-800 hover:bg-primary-gradient text-sm sm:text-lg flex items-center justify-center rounded-full w-[24px] h-[24px] sm:w-[32px] sm:h-[32px] text-white hover:text-blue-50;
+    @apply px-8 py-2 text-xs font-semibold border-2 hover:font-sans border-secondColor-light dark:border-secondColor-dark hover:text-primary-gradient font-crimson text-textColor-light dark:text-textColor-dark;
   }
 
   /* Title */

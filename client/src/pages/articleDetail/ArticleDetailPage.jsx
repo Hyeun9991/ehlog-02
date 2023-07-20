@@ -11,7 +11,7 @@ const ArticleDetailPage = () => {
     <MainLayout>
       <SecondaryHeader />
       <PostInfo />
-      <CommentsContainer className="" />
+      <CommentsContainer loggedInUserId="a" />
       <WriterInfo />
       <SuggestedPosts />
     </MainLayout>

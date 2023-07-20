@@ -1,4 +1,4 @@
-export const commentItems = async () => {
+export const getCommentsData = async () => {
   return [
     {
       _id: '10',
@@ -20,8 +20,8 @@ export const commentItems = async () => {
       },
       desc: '바나나 좋아해!!',
       post: '1',
-      parent: null,
-      replyOnUser: null,
+      parent: '10',
+      replyOnUser: 'a',
       createdAt: '2023-07-10',
     },
     {
@@ -35,6 +35,18 @@ export const commentItems = async () => {
       parent: null,
       replyOnUser: null,
       createdAt: '2023-07-10',
+    },
+    {
+      _id: '13',
+      user: {
+        _id: 'd',
+        name: 'durian',
+      },
+      desc: '두리안 안좋아해...',
+      post: '1',
+      parent: null,
+      replyOnUser: null,
+      createdAt: '2023-07-13',
     },
   ];
 };

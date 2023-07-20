@@ -26,13 +26,13 @@ const ArticleSliderBanner = () => {
         <div className="relative py-10 md:py-12">
           <div className="flex gap-3 text-2xl">
             <button
-              className="hidden lg:active-button absolute active-button top-1/2 left-[-4rem]"
+              className="hidden lg:secondary-button-icon absolute top-1/2 left-[-4rem]"
               onClick={scrollLeft}
             >
               <BsArrowLeftShort />
             </button>
             <button
-              className="hidden active-button lg:active-button absolute top-1/2 right-[-4rem]"
+              className="hidden lg:secondary-button-icon absolute top-1/2 right-[-4rem]"
               onClick={scrollRight}
             >
               <BsArrowRightShort />

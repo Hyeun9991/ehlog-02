@@ -16,7 +16,7 @@ const SearchBanner = () => {
               placeholder="Search article"
               className="w-64 h-10 text-sm font-semibold bg-transparent border-b-2 outline-none border-secondColor-light text-primary-gradient placeholder:font-crimson placeholder:font-light dark:text-primaryColor-dark focus:border-primaryColor-defaultColor"
             />
-            <button className="primary-active-button">
+            <button className="primary-button-icon">
               <FiSearch />
             </button>
           </div>

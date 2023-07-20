@@ -31,7 +31,7 @@ const AboutBanner = () => {
                 href={item.to}
                 target="_blank"
                 rel="noreferrer"
-                className="active-button-res bg-secondColor-light/60 text-white/60"
+                className="opacity-60 active-button hover:opacity-100"
               >
                 {item.icon}
               </a>

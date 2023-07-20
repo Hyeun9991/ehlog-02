@@ -41,7 +41,7 @@ const SideMenu = () => {
           <div className="flex flex-col gap-6 mt-8 sm:gap-4">
             {linkItems.map((item) => (
               <Link key={item.id} to={item.to} target="_blank" rel="noreferrer">
-                <span className="text-white/70 active-button-res bg-secondColor-light/50">
+                <span className="opacity-60 active-button hover:opacity-100">
                   {item.icon}
                 </span>
               </Link>
