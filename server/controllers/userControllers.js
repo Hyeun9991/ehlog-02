@@ -1,6 +1,6 @@
 import User from '../models/User';
 
-export const registerUser = async (req, res) => {
+export const registerUser = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
 
@@ -9,7 +9,8 @@ export const registerUser = async (req, res) => {
 
     if (user) {
       // 400: 클라이언트 요청이 잘못된 경우를 나타낸다. (Bad Request)
-      return res.status(400).json({ message: '이미 존재하는 이메일입니다.' });
+      // return res.status(400).json({ message: '이미 존재하는 이메일입니다.' });
+      throw new Error('이미 존재하는 이메일입니다.');
     }
 
     // 새로운 유저 생성
@@ -26,8 +27,7 @@ export const registerUser = async (req, res) => {
       token: await user.generateJWT(),
     });
   } catch (error) {
-    // 500: 서버 오류
-    return res.status(500).json({ message: '문제가 발생했습니다.' });
+    next(error);
   }
 };
 
