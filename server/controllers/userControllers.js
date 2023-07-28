@@ -133,14 +133,17 @@ const updateProfilePicture = async (req, res, next) => {
       } else {
         // 업로드가 정상적으로 완료된 경우
         if (req.file) {
-          // 업로드된 파일이 존재하면 해당 파일을 사용자 프로필 사진으로 업데이트
-          const updatedUser = await User.findByIdAndUpdate(
-            req.user._id,
-            {
-              avatar: req.file.filename,
-            },
-            { new: true },
-          );
+          let filename;
+          let updatedUser = await User.findById(req.user._id); // 업로드된 파일이 존재하는 경우 해당 사용자의 정보를 데이터베이스에서 가져옴
+          filename = updatedUser.avatar; // 이전에 사용가자 가진 프로필 사진 파일명을 filename 변수에 저장
+
+          // 사용자가 프로필 사진을 가지고 있는 경우
+          if (filename) {
+            fileRemover(filename); // fileRemover를 호출해서 이전 사진 파일을 삭제
+          }
+
+          updatedUser.avatar = req.file.filename; // 새로운 업로드 파일의 파일명을 사용자의 프로필 사진으로 설정
+          await updatedUser.save(); // 사용자 정보를 업데이트하고, 데이터베이스에 저장
 
           res.json({
             _id: updatedUser._id,
@@ -153,11 +156,8 @@ const updateProfilePicture = async (req, res, next) => {
           });
         } else {
           // 업로드된 파일이 없는 경우
-
           let filename;
-
-          // 기존 사용자 정보를 가져옴
-          let updatedUser = await User.findById(req.user._id);
+          let updatedUser = await User.findById(req.user._id); // 기존 사용자 정보를 가져옴
           filename = updatedUser.avatar;
           updatedUser.avatar = '';
           await updatedUser.save();
