@@ -3,8 +3,12 @@ import ArticleCard from '../../../components/ArticleCard';
 
 const Articles = () => {
   return (
-    <section className="border-b-2 border-secondColor-light bg-bgColor-light dark:bg-bgColor-dark dark:border-secondColor-dark">
+    <section className="border-b-2 border-secondColor-light bg-bgColor-dark dark:bg-bgColor-dark dark:border-secondColor-dark">
       <div className="main-container">
+        <h1 className="title-2xl">
+          Never Miss a New Post
+          <span className="text-4xl primary-dot-2xl"> .</span>
+        </h1>
         <h1 className="title-2xl">
           Never Miss a New Post
           <span className="text-4xl primary-dot-2xl"> .</span>

@@ -1,8 +1,12 @@
 import React, { useRef } from 'react';
 import ArticleItem from '../../../components/ArticleItem';
 import { BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeCount } from '../../../store/actions/countActions';
 
 const ArticleSliderBanner = () => {
+  const dispatch = useDispatch();
+  const count = useSelector((state) => state.count);
   const contentRef = useRef(null);
 
   const scrollLeft = () => {
@@ -14,6 +18,10 @@ const ArticleSliderBanner = () => {
     if (contentRef.current) {
       contentRef.current.scrollLeft += 540;
     }
+  };
+
+  const countChangeHandler = (type) => {
+    dispatch(changeCount(type));
   };
 
   return (
@@ -63,6 +71,15 @@ const ArticleSliderBanner = () => {
         <div className="flex justify-center gap-4">
           <button className="secondary-button-sm sm:secondary-button">
             More Articles
+          </button>
+        </div>
+        <div className="flex items-center mt-2 gap-x-5">
+          <button onClick={() => countChangeHandler('DECREASE')}>
+            decrease
+          </button>
+          {count.number}
+          <button onClick={() => countChangeHandler('INCREASE')}>
+            increase
           </button>
         </div>
       </div>
